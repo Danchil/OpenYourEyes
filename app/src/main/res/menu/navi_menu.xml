@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/peopleFragment"
+        android:icon="@drawable/people"
+        android:enabled="true"
+        android:title="people" />
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/alarm"
+        android:enabled="true"
+        android:checked="true"
+        android:title="home" /> <!-- 아이콘 이름을 내가 알람으로 해놔서 알람이다-->
+
+    <item
+        android:id="@+id/toolFragment"
+        android:icon="@drawable/tool"
+        android:enabled="true"
+        android:title="tool" />
+
+</menu>
