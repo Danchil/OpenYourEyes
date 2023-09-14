@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,30 +7,61 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="193px">
+        android:orientation="vertical"
+        android:layout_marginTop="60dp"> <!-- 193px -->
 
         <TextView
-            android:id="@+id/title_text"
-            android:layout_width="wrap_content"
+            android:id="@+id/header_text1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:fontFamily="@font/oxygen_bold"
+            android:textColor="@color/primary_text"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/header_text2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/header_text2"/>
+
+        <TextView
+            android:id="@+id/header_text2"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/oxygen_bold"
             android:text="알람"
+            android:gravity="center"
             android:textColor="@color/title_text"
-            android:textSize="24dp" />
+            android:textSize="24dp"
+            app:layout_constraintEnd_toStartOf="@+id/header_text3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/header_text1" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/header_text3"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/title_text"
-            android:layout_alignBottom="@+id/title_text"
+            android:paddingRight="25dp"
             android:fontFamily="@font/oxygen_bold"
             android:text="추가"
+            android:gravity="right"
             android:textColor="@color/primary_text"
-            android:textSize="18dp" />
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/header_text2"
+            app:layout_constraintBaseline_toBaselineOf="@id/header_text2" />
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/alram_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,5 +9,6 @@
     <color name="primary_soft">#FFE8EF</color> <!-- 주요색 연하게 -->
     <color name="gray_text">#C7C4C4</color> <!-- 선택 해제 글씨 -->
     <color name="gray">#C4C4C4</color> <!-- 선택 해제 -->
+    <color name="alram_off">#F5E9EB</color> <!-- 알람 OFF 색 -->
 
 </resources>
