@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="navi">#F5A1B9</color>
+
     <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
     <color name="title_text">#A06784</color> <!-- 제목 text -->
     <color name="primary_text">#F8B8CB</color> <!-- 주요색 글씨 -->
     <color name="primary">#F4CED9</color> <!-- 주요색 -->
