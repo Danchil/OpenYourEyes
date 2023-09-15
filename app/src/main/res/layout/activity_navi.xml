@@ -4,28 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-    <!-- tools:context=".NaviActivity"> -->
+    android:orientation="vertical">
 
     <FrameLayout
-        android:id="@+id/mainFrameLayout"
+        android:id="@+id/mainNaviFragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-160dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:layout_weight= "10" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigationView"
+        android:id="@+id/mainNavi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        app:background="@color/hadanba"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/navi_menu"
-        app:itemIconTint="@drawable/menu_click_color"
+        app:itemIconTint="@drawable/menu_selector_color"
+        app:itemBackground="@color/navi"
+        app:itemIconSize="28dp"
         app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
 
-         <!-- 타이틀 글씨 안보이게 해놓는 거 -->
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--app:layout_constraintBottom_toBottomOf="parent" 하단바 위치 아래쪽으로 하는 것-->
+    <!-- app:labelVisibilityMode="unlabeled" 타이틀 글씨 안보이게 해놓는 거-->
+<!-- tools:context=".NaviActivity" -->
