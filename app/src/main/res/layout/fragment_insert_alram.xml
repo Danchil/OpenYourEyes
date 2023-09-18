@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".InsertAlramFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
@@ -20,6 +19,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="25dp"
             android:fontFamily="@font/oxygen_bold"
+            android:text="취소"
             android:textColor="@color/primary_text"
             android:textSize="18dp"
             app:layout_constraintEnd_toStartOf="@+id/header_text2"
@@ -33,7 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/oxygen_bold"
-            android:text="알람"
+            android:text="알람 설정"
             android:gravity="center"
             android:textColor="@color/title_text"
             android:textSize="24dp"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:paddingRight="25dp"
             android:fontFamily="@font/oxygen_bold"
-            android:text="추가"
+            android:text="저장"
             android:gravity="right"
             android:textColor="@color/primary_text"
             android:textSize="18dp"
@@ -58,13 +58,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/alram_list"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-<!--        tools:listitem="@layout/item_alram_list"/>-->
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -89,5 +89,14 @@
             android:layout_height="match_parent"
             android:layout_weight="2"/>
 
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sw_notification_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:thumb="@drawable/thumb"
+            app:track="@drawable/track"
+            app:thumbTextPadding="24dp"
+            app:switchMinWidth="0dp"/>
     </LinearLayout>
 </LinearLayout>
