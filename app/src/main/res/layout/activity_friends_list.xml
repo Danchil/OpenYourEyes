@@ -29,24 +29,24 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linear_2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="25dp"
         android:layout_weight="25"
         android:orientation="horizontal"
-        android:weightSum="30"
-        android:layout_marginTop="25dp">
+        android:weightSum="30">
 
         <android.widget.Button
-            android:id="@+id/angry_btn"
+            android:id="@+id/miracle_btn"
             android:layout_width="114dp"
             android:layout_height="50dp"
+            android:layout_marginLeft="55dp"
             android:background="@drawable/button_miracle"
             android:text="미라클 모닝"
             android:textColor="#9B6F8C"
             android:textSize="12sp"
-            android:layout_marginLeft="45dp"
-            tools:ignore="TouchTargetSizeCheck"
-            />
+            tools:ignore="TouchTargetSizeCheck" />
 
         <android.widget.Button
             android:id="@+id/plus"
@@ -61,7 +61,7 @@
             android:id="@+id/search"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/round_button"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
@@ -69,17 +69,30 @@
             android:id="@+id/message"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/round_button"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linear_3"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="20dp"
         android:layout_weight="230"
         android:orientation="horizontal"
         android:weightSum="3">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_main"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="40dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/friends_recycler_view">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
     </LinearLayout>
 
 </LinearLayout>
