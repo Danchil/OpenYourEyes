@@ -29,4 +29,4 @@
 
     <!--app:layout_constraintBottom_toBottomOf="parent" 하단바 위치 아래쪽으로 하는 것-->
     <!-- app:labelVisibilityMode="unlabeled" 타이틀 글씨 안보이게 해놓는 거-->
-<!-- tools:context=".NaviActivity" -->
+    <!-- tools:context=".NaviActivity" -->

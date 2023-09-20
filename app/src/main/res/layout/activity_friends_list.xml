@@ -41,9 +41,13 @@
             android:id="@+id/miracle_btn"
             android:layout_width="114dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="55dp"
-            android:background="@drawable/button_miracle"
+            android:layout_marginLeft="45dp"
+            android:background="@drawable/btn_miracle"
+            android:drawableLeft="@drawable/ic_miracle"
+            android:paddingLeft="9dp"
+            android:outlineProvider="none"
             android:text="미라클 모닝"
+            android:fontFamily="@font/oxygen_bold"
             android:textColor="#9B6F8C"
             android:textSize="12sp"
             tools:ignore="TouchTargetSizeCheck" />
@@ -52,8 +56,11 @@
             android:id="@+id/plus"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:outlineProvider="none"
             android:layout_marginLeft="35dp"
-            android:background="@drawable/round_button"
+            android:background="@drawable/btn_round"
+            android:drawableLeft="@drawable/ic_plus"
+            android:paddingLeft="18dp"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
 
@@ -62,7 +69,10 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/round_button"
+            android:outlineProvider="none"
+            android:background="@drawable/btn_round"
+            android:drawableLeft="@drawable/ic_dodbogi"
+            android:paddingLeft="15dp"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         <android.widget.Button
@@ -70,7 +80,10 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/round_button"
+            android:outlineProvider="none"
+            android:background="@drawable/btn_round"
+            android:drawableLeft="@drawable/ic_message"
+            android:paddingLeft="13.5dp"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
     </LinearLayout>
 
@@ -79,21 +92,21 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="20dp"
-        android:layout_weight="230"
+        android:layout_weight="240"
         android:orientation="horizontal"
         android:weightSum="3">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycle_main"
-            android:layout_width="350dp"
+            android:layout_width="330dp"
             android:layout_height="120dp"
             android:layout_marginLeft="40dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/friends_recycler_view">
-
         </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
+
 
 </LinearLayout>
 
