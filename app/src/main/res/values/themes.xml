@@ -8,4 +8,10 @@
         <item name="android:windowBackground">#FFF6F8</item>
     </style>
 
+    <style name="MyBase.TimePicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/oxygen_bold</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textColorPrimary">@color/text</item>
+    </style>
 </resources>
