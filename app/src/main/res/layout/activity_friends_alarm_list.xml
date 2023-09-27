@@ -54,6 +54,7 @@
             android:layout_marginLeft="15dp"
             android:layout_alignParentTop="true"
             android:fontFamily="@font/oxygen_regular"
+            android:textColor="@color/black"
             android:text="user name"
             android:textSize="23dp"
             />
