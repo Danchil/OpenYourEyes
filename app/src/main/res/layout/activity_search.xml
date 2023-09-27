@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:weightSum="300">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cst_top"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="35"
-        android:orientation="horizontal"
-        android:weightSum="3">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="1.0"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/header_text2"
@@ -25,55 +28,67 @@
             android:textSize="24dp"
             app:layout_constraintEnd_toStartOf="@+id/header_text3"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/header_text1" />
-    </LinearLayout>
+            app:layout_constraintStart_toEndOf="@+id/header_text1"
+            tools:ignore="UnknownIdInLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
-        android:id="@+id/linear_2"
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cst_2"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="20"
-        android:orientation="horizontal"
-        android:weightSum="30">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cst_top"
+        app:layout_constraintWidth_percent="1"
+        android:padding="8dp"
+        tools:ignore="MissingConstraints">
 
         <EditText
             android:id="@+id/search_bar"
-            android:layout_width="200dp"
+            android:layout_width="230dp"
             android:layout_height="40dp"
+            android:background="@drawable/search_border"
             android:gravity="center"
-            android:textSize="16dp"
             android:hint="검색하세요"
             android:textColor="@color/gray_text"
-            android:background="@drawable/search_border"
-            />
+            android:textSize="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <android.widget.Button
             android:id="@+id/search"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toRightOf="@id/search_bar"
             android:outlineProvider="none"
             android:background="@drawable/btn_round"
             android:drawableLeft="@drawable/ic_dodbogi"
-            android:paddingLeft="15dp"
+            android:paddingLeft="10dp"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
-        android:id="@+id/linear_3"
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cst_3"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="20"
-        android:orientation="horizontal"
-        android:weightSum="30">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cst_2"
+        app:layout_constraintWidth_percent="1"
+        tools:ignore="MissingConstraints">
 
         <android.widget.Button
             android:id="@+id/miracle_search_btn"
-            android:layout_width="114dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="45dp"
-            android:paddingLeft="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_search"
+            android:paddingLeft="3dp"
             android:outlineProvider="none"
             android:text="미라클 모닝"
             android:fontFamily="@font/oxygen_bold"
@@ -83,28 +98,33 @@
 
         <android.widget.Button
             android:id="@+id/friends_search_btn"
-            android:layout_width="114dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="45dp"
-            android:paddingLeft="9dp"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_search"
+            app:layout_constraintLeft_toRightOf="@id/miracle_search_btn"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="2dp"
             android:outlineProvider="none"
             android:text="친구"
             android:fontFamily="@font/oxygen_bold"
             android:textColor="#9B6F8C"
             android:textSize="12sp"
             tools:ignore="TouchTargetSizeCheck" />
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
-        android:id="@+id/linear_4"
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cst_bottom"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="225"
-        android:orientation="horizontal"
-        android:weightSum="3">
-    </LinearLayout>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cst_3"
+        app:layout_constraintWidth_percent="1"
+        tools:ignore="MissingConstraints">
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- 버튼색이 적용이 안될 때 android.widget. 을 붙이세요 -->
