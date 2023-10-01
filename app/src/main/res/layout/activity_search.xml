@@ -26,9 +26,6 @@
             android:text="검색"
             android:textColor="@color/title_text"
             android:textSize="24dp"
-            app:layout_constraintEnd_toStartOf="@+id/header_text3"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/header_text1"
             tools:ignore="UnknownIdInLayout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -124,9 +121,11 @@
 
         <View
             android:id="@+id/search_line"
-            android:layout_width="350dp"
+            android:layout_width="330dp"
             android:layout_height="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             android:background="@color/search_bar"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
