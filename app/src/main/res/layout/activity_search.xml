@@ -11,11 +11,23 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintHeight_percent="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="1.0"
         tools:ignore="MissingConstraints">
+
+        <android.widget.Button
+            android:id="@+id/back_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:outlineProvider="none"
+            android:background="@drawable/ic_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/header_text2"

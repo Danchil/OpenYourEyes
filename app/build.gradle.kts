@@ -50,6 +50,8 @@ dependencies {
     
     //하단 네비게이션 바
     implementation ("com.ismaeldivita.chipnavigation:chip-navigation-bar:1.3.0")
+    implementation ("androidx.navigation:navigation-fragment:2.3.2")
+    implementation ("androidx.navigation:navigation-ui:2.3.2")
 
     // 리사이클러뷰
     implementation("androidx.recyclerview:recyclerview:1.2.1")
