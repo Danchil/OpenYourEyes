@@ -46,6 +46,7 @@
             android:id="@+id/profile"
             android:layout_width="70dp"
             android:layout_height="70dp"
+            android:src="@drawable/basic_profile"
             app:shapeAppearance="@style/circular"
             android:outlineProvider="none"
             app:strokeWidth="9dp"
