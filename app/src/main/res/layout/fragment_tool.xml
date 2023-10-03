@@ -157,7 +157,7 @@
         android:paddingRight="20dp"
         android:paddingLeft="20dp"
         android:background="@drawable/btn_pink"
-        android:text="깨우기 알람 설정"
+        android:text="깨우기 알림 설정"
         android:fontFamily="@font/oxygen_bold"
         android:textSize="16dp"
         android:textAlignment="viewStart"
