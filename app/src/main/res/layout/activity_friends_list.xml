@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fl_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="1.0">
+
+        <TextView
+            android:id="@+id/header_text2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/oxygen_bold"
+            android:gravity="bottom|center"
+            android:text="친구 목록"
+            android:textColor="@color/title_text"
+            android:textSize="24dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fl_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_top"
+        app:layout_constraintWidth_percent="1">
+
+        <android.widget.Button
+            android:id="@+id/miracle_btn"
+            android:layout_width="114dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_miracle"
+            android:drawableLeft="@drawable/ic_miracle"
+            android:paddingLeft="9dp"
+            android:outlineProvider="none"
+            android:text="미라클 모닝"
+            android:fontFamily="@font/oxygen_bold"
+            android:textColor="#9B6F8C"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+        <android.widget.Button
+            android:id="@+id/search"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:outlineProvider="none"
+            android:background="@drawable/btn_round"
+            android:drawableLeft="@drawable/ic_dodbogi"
+            android:paddingLeft="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.67"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <android.widget.Button
+            android:id="@+id/message"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:outlineProvider="none"
+            android:background="@drawable/btn_round"
+            android:drawableLeft="@drawable/ic_message"
+            android:paddingLeft="13.5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fl_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_2"
+        app:layout_constraintWidth_percent="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_main"
+            android:layout_width="330dp"
+            android:layout_height="130dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/friends_recycler_view"
+            tools:ignore="MissingConstraints">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!-- 버튼색이 적용이 안될 때 android.widget. 을 붙이세요 -->
