@@ -48,4 +48,22 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    //하단 네비게이션 바
+    implementation ("com.ismaeldivita.chipnavigation:chip-navigation-bar:1.3.0")
+    implementation ("androidx.navigation:navigation-fragment:2.3.2")
+    implementation ("androidx.navigation:navigation-ui:2.3.2")
+
+    // 리사이클러뷰
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+
+    // For control over item selection of both touch and mouse driven selection
+    implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
+
+    //카드뷰
+    implementation("androidx.cardview:cardview:1.0.0")
+
+    //원형 프로필
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+
 }
