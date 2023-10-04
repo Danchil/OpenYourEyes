@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cst_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="1.0"
+        tools:ignore="MissingConstraints">
+
+        <android.widget.Button
+            android:id="@+id/back_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:outlineProvider="none"
+            android:background="@drawable/ic_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/header_text2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/oxygen_bold"
+            android:gravity="bottom|center"
+            android:text="검색"
+            android:textColor="@color/title_text"
+            android:textSize="24dp"
+            tools:ignore="UnknownIdInLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cst_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cst_top"
+        app:layout_constraintWidth_percent="1"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:background="@drawable/search_border"
+            android:gravity="center"
+            android:hint="검색하세요"
+            android:textColor="@color/gray_text"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <android.widget.Button
+            android:id="@+id/search"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toRightOf="@id/search_bar"
+            android:outlineProvider="none"
+            android:background="@drawable/btn_round"
+            android:drawableLeft="@drawable/ic_dodbogi"
+            android:paddingLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.87"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cst_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cst_2"
+        app:layout_constraintWidth_percent="1"
+        tools:ignore="MissingConstraints">
+
+        <android.widget.Button
+            android:id="@+id/miracle_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@drawable/btn_search"
+            android:paddingLeft="3dp"
+            android:outlineProvider="none"
+            android:text="미라클 모닝"
+            android:fontFamily="@font/oxygen_bold"
+            android:textColor="#9B6F8C"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <android.widget.Button
+            android:id="@+id/friends_search_btn"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:background="@drawable/btn_search"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="2dp"
+            android:outlineProvider="none"
+            android:text="친구"
+            android:fontFamily="@font/oxygen_bold"
+            android:textColor="#9B6F8C"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toRightOf="@id/miracle_search_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <View
+            android:id="@+id/search_line"
+            android:layout_width="330dp"
+            android:layout_height="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@color/search_bar"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cst_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cst_3"
+        app:layout_constraintWidth_percent="1"
+        tools:ignore="MissingConstraints">
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 버튼색이 적용이 안될 때 android.widget. 을 붙이세요 -->
