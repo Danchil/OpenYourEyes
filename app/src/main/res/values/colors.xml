@@ -12,6 +12,4 @@
     <color name="gray">#C4C4C4</color> <!-- 선택 해제 -->
     <color name="alram_off">#F5E9EB</color> <!-- 알람 OFF 색 -->
     <color name="search_bar">#DBBFCD</color> <!-- 검색창 테두리 색 -->
-    <color name="text">#6A515E</color> <!-- 텍스트 -->
-
 </resources>
