@@ -1,14 +1,216 @@
+
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ToolFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/header_text1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:fontFamily="@font/oxygen_bold"
+            android:textColor="@color/primary_text"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/header_text2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/header_text2"/>
+
+        <TextView
+            android:id="@+id/header_text2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/oxygen_bold"
+            android:text="설정"
+            android:gravity="center"
+            android:textColor="@color/title_text"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toStartOf="@+id/header_text3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/header_text1" />
+
+        <TextView
+            android:id="@+id/header_text3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="25dp"
+            android:fontFamily="@font/oxygen_bold"
+            android:text=""
+            android:gravity="right"
+            android:textColor="@color/primary_text"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/header_text2"
+            app:layout_constraintBaseline_toBaselineOf="@id/header_text2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintBottom_toTopOf="@+id/miracle_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/pf_img"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.07"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="닉네임"
+            android:fontFamily="@font/oxygen_bold"
+            android:textSize="18dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/pf_img"
+            app:layout_constraintRight_toLeftOf="@+id/profileBtn"
+            app:layout_constraintVertical_bias="0.2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="email1235@gmail.com"
+            android:fontFamily="@font/oxygen_regular"
+            android:textSize="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/pf_img"
+            app:layout_constraintRight_toLeftOf="@+id/profileBtn"
+            app:layout_constraintVertical_bias="0.7"/>
+
+        <ImageButton
+            android:id="@+id/profileBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pencil"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/pf_img"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/miracle_btn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/btn_pink"
+        android:text="미라클모닝 기록"
+        android:fontFamily="@font/oxygen_bold"
+        android:textSize="16dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text"
+        android:drawableRight="@drawable/z"
+        app:layout_constraintTop_toBottomOf="@+id/profile"
+        app:layout_constraintBottom_toTopOf="@+id/waken_setting_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </Button>
+
+    <Button
+        android:id="@+id/waken_setting_btn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/btn_pink"
+        android:text="깨우기 알림 설정"
+        android:fontFamily="@font/oxygen_bold"
+        android:textSize="16dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text"
+        android:drawableRight="@drawable/z"
+        app:layout_constraintTop_toBottomOf="@+id/miracle_btn"
+        app:layout_constraintBottom_toTopOf="@+id/logout_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </Button>
+
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/btn_pink"
+        android:text="로그아웃"
+        android:fontFamily="@font/oxygen_bold"
+        android:textSize="16dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text"
+        app:layout_constraintTop_toBottomOf="@+id/waken_setting_btn"
+        app:layout_constraintBottom_toTopOf="@+id/delete_account_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </Button>
+
+    <Button
+        android:id="@+id/delete_account_btn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/btn_gray"
+        android:text="계정 탈퇴"
+        android:fontFamily="@font/oxygen_bold"
+        android:textSize="16dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text"
+        app:layout_constraintTop_toBottomOf="@+id/logout_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

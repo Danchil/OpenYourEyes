@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".HomeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MissionFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="60dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <TextView
             android:id="@+id/header_text1"
@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="25dp"
             android:fontFamily="@font/oxygen_bold"
+            android:text="이전"
             android:textColor="@color/primary_text"
             android:textSize="18dp"
             app:layout_constraintEnd_toStartOf="@+id/header_text2"
@@ -36,13 +37,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/oxygen_bold"
-            android:text="알람"
+            android:text="미션 설정"
             android:gravity="center"
             android:textColor="@color/title_text"
             android:textSize="24dp"
             app:layout_constraintEnd_toStartOf="@+id/header_text3"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/header_text1" />
+            app:layout_constraintStart_toEndOf="@+id/header_text1"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/header_text3"
@@ -50,7 +52,7 @@
             android:layout_height="wrap_content"
             android:paddingRight="25dp"
             android:fontFamily="@font/oxygen_bold"
-            android:text="추가"
+            android:text="저장"
             android:gravity="right"
             android:textColor="@color/primary_text"
             android:textSize="18dp"
@@ -61,17 +63,32 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/alram_list"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="120dp"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recording"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/solid_bottom"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:listitem="@layout/item_alram_list"/>
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사칙연산"
+            android:fontFamily="@font/oxygen_bold"
+            android:textSize="18dp"
+            android:textColor="@color/text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

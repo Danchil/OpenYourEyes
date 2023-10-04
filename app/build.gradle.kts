@@ -65,4 +65,5 @@ dependencies {
     //원형 프로필
     implementation ("de.hdodenhof:circleimageview:3.1.0")
 
+
 }
