@@ -251,7 +251,7 @@
         app:layout_constraintTop_toBottomOf="@id/flash_layout">
 
         <TextView
-            android:id="@+id/flashText"
+            android:id="@+id/waken_time_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"

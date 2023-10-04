@@ -42,7 +42,8 @@
             android:textSize="24dp"
             app:layout_constraintEnd_toStartOf="@+id/header_text3"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/header_text1" />
+            app:layout_constraintStart_toEndOf="@+id/header_text1"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
             android:id="@+id/header_text3"
@@ -118,7 +119,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            app:layout_constraintLeft_toRightOf="@id/name_text"/>
+            android:text="닉네임1"
+            android:textColor="@color/text"
+            android:fontFamily="@font/oxygen_regular"
+            android:textSize="17dp"
+            app:layout_constraintLeft_toRightOf="@id/name_text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -132,6 +139,7 @@
         app:layout_constraintTop_toBottomOf="@id/name_layout">
 
         <TextView
+            android:id="@+id/account_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="계정"
@@ -142,6 +150,19 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/account_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="email1234@gmail.com"
+            android:textColor="@color/text"
+            android:fontFamily="@font/oxygen_regular"
+            android:textSize="17dp"
+            app:layout_constraintLeft_toRightOf="@id/account_text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
